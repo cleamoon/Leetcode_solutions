@@ -1,4 +1,9 @@
-# Write your MySQL query statement below
+-- One solution:
 delete A
 from Person A, Person B
 where A.id > B.id and A.email = B.email;
+
+-- Another solution:
+DELETE p1 FROM Person p1
+INNER JOIN Person p2
+WHERE p1.email = p2.email AND p1.id > p2.id;
